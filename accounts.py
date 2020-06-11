@@ -46,8 +46,16 @@ def options():
     choice = input("> ")
 
     if choice == "1":
-        import adventure_text
-        adventure_text.start()
+        print("What would you like to play? \n(1) A Superhero game or (2) a prison-escape game?")
+        game_choice = input("> ")
+
+        if game_choice == "1":
+            import hero_game
+            hero_game.a_map.play()
+
+        elif game_choice == "2":
+            import adventure_text
+            adventure_text.start()
 
     elif choice == "2":
         import Health
